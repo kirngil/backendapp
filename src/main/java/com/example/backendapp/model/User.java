@@ -1,6 +1,7 @@
 package com.example.backendapp.model;
 
 public class User {
+    private int userId;
     private String name;
     private String address;
     private int age;
@@ -9,6 +10,14 @@ public class User {
       this.name=name;
       this.age = age;
       this.address=address;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getName() {
