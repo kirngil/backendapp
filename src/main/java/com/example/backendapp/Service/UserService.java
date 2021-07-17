@@ -12,7 +12,30 @@ public class UserService {
     @Autowired
     private UserRep userRep;
 
-    public User getuser(){
+    public User saveUser(User user) {
+        return userRep.save(user);
+    }
+
+    public List<User> getAllUsers() {
+        return userRep.findAll();
+
+    }
+
+    public User updateUser(User user) {
+        return userRep.save(user);
+    }
+
+
+    public void deleteUser(String userid) {
+        userRep.deleteById(userid);
+    }
+
+    public List<User> getByAddress(String address) {
+    return userRep.findAllByAddress(address);
+    }
+}
+
+  /*  public User getuser(){
        return  userRep.getuser();
     }
 
@@ -21,10 +44,7 @@ public class UserService {
         return userRep.saveUser(user);
     }
 
-    public List<User> getAllUsers() {
-    return userRep.getAllUsers();
 
-    }
 
     public User getUserByID(int userid) {
    return userRep.getuserById(userid);
@@ -38,3 +58,5 @@ public class UserService {
         return userRep.deleteUser(userid);
     }
 }
+*/
+
